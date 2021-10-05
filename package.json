@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"license": "LGPL-3.0-or-later",
+	"homepage": "https://matafokka.github.io/geotiff-3d-dem-viewer",
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.4",
 		"@fortawesome/fontawesome-svg-core": "^1.2.36",
