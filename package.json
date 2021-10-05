@@ -24,6 +24,7 @@
 		"cesium": "^1.85.0",
 		"geotiff": "^1.0.5",
 		"geotiff-geokeys-to-proj4": "^2021.10.5",
+		"gh-pages": "^3.2.3",
 		"node-sass": "^6.0.1",
 		"proj4": "^2.7.5",
 		"react": "^17.0.2",
@@ -43,7 +44,9 @@
 		"build": "craco build",
 		"serve": "http-server \"./build\" -c-1",
 		"build:serve": "npm run build && npm run serve",
-		"test": "craco test"
+		"test": "craco test",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -b gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [

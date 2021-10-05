@@ -15,17 +15,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - run: npm install && npm run build
-      
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/master' }}
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          publish-branh: gh-pages
+      - run: npm install
+
+      - name: Deploy with gh-pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages -b gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+          env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
