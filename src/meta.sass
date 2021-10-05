@@ -1,0 +1,19 @@
+$bg-transition: background-color 0.2s
+$elem-bg: #4e4e4e
+$elem-hover-bg: #727272
+$elem-active-bg: #323232
+$window-bg: #212121
+
+@mixin button-width($size)
+	min-width: $size
+	width: $size
+	max-width: $size
+
+@mixin button-height($size)
+	min-height: $size
+	height: $size
+	max-height: $size
+
+@mixin button-all($size)
+	@include button-width($size)
+	@include button-height($size)

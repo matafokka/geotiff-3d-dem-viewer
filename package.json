@@ -1,43 +1,83 @@
 {
-  "name": "geotiff-3d-viewer",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^12.20.25",
-    "@types/react": "^17.0.21",
-    "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.4.3",
-    "web-vitals": "^1.1.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "geotiff-3d-dem-viewer",
+	"version": "1.0.0",
+	"private": true,
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.15.4",
+		"@fortawesome/free-solid-svg-icons": "^5.15.4",
+		"@fortawesome/react-fontawesome": "^0.1.15",
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^11.2.7",
+		"@testing-library/user-event": "^12.8.3",
+		"@turf/bbox": "^6.5.0",
+		"@turf/helpers": "^6.5.0",
+		"@types/jest": "^26.0.24",
+		"@types/node": "^12.20.25",
+		"@types/proj4": "^2.5.2",
+		"@types/react": "^17.0.21",
+		"@types/react-collapse": "^5.0.1",
+		"@types/react-dom": "^17.0.9",
+		"@types/react-tabs": "^2.3.3",
+		"cesium": "^1.85.0",
+		"geotiff": "^1.0.5",
+		"geotiff-geokeys-to-proj4": "^2021.10.5",
+		"node-sass": "^6.0.1",
+		"proj4": "^2.7.5",
+		"react": "^17.0.2",
+		"react-app-polyfill": "^2.0.0",
+		"react-collapse": "^5.1.0",
+		"react-detect-click-outside": "^1.1.1",
+		"react-dom": "^17.0.2",
+		"react-helmet": "^6.1.0",
+		"react-scripts": "4.0.3",
+		"react-tabs": "^3.2.2",
+		"resium": "^1.14.2",
+		"typescript": "^4.4.3",
+		"web-vitals": "^1.1.2"
+	},
+	"scripts": {
+		"start": "craco start",
+		"build": "craco build",
+		"serve": "http-server \"./build\" -c-1",
+		"build:serve": "npm run build && npm run serve",
+		"test": "craco test"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		],
+		"rules": {
+			"quotes": [
+				"warn",
+				"double"
+			],
+			"indent": [
+				"warn",
+				"tab"
+			]
+		}
+	},
+	"browserslist": {
+		"production": [
+			"chrome >= 8",
+			"firefox >= 4",
+			"safari > 5",
+			"ios_saf >= 8",
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@craco/craco": "^6.3.0",
+		"cpy-cli": "^3.1.1",
+		"craco-cesium": "^1.2.0",
+		"symlink-dir": "^5.0.1"
+	}
 }

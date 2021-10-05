@@ -1,0 +1,51 @@
+$time: 0.4s
+
+.modal-backdrop
+	position: absolute
+	z-index: 999
+	background-color: rgba(0, 0, 0, 0.75)
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	opacity: 1
+	transition: opacity $time
+
+.modal-backdrop.modal-hidden
+	top: -100%
+	width: 0
+	height: 0
+	opacity: 0
+	padding: 0
+	background-color: transparent
+	transition: all 0s $time, opacity $time
+	.modal
+		top: 35%
+		transition: top $time
+
+.modal
+	position: relative
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: auto
+	max-width: 30rem
+	margin: 0
+	transition: top $time
+
+.modal-content
+	max-height: 90%
+
+.modal-header
+	width: 100%
+	text-align: center
+	background: rgba(255, 255, 255, 0.1)
+	padding: 6px
+	margin: -6px -6px 6px
+
+.modal-buttons
+	width: 100%
+	.modal-buttons-wrapper
+		float: right
+		*
+			margin-bottom: 0

@@ -1,0 +1,42 @@
+@import "../meta"
+
+.button, .cesium-button
+	box-shadow: none !important
+	color: white !important
+	fill: white !important
+	border-radius: 6px
+	padding: 5px 12px
+	transition: $bg-transition
+
+.cesium-button, .button.cesium-button
+	border: 1px solid #878787 !important
+	background-color: #212121
+
+.button
+	display: inline-block
+	background-color: $elem-bg
+	border: none
+	box-sizing: border-box
+	text-align: center
+	margin: 6px 3px
+	line-height: 24px
+	@include button-height(32px)
+
+.button:hover, .cesium-button:hover
+	background-color: $elem-hover-bg
+	transition: $bg-transition
+
+.button:active, .cesium-button:active
+	background-color: $elem-active-bg
+	transition: $bg-transition
+
+.button[type="text"], .button[type="number"]
+	text-align: left
+
+.button[type="text"].invalid
+	background-color: #863c3c
+
+.button-expanded
+	width: 100%
+	margin-left: 0
+	margin-right: 0

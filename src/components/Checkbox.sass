@@ -1,0 +1,26 @@
+@import "../meta"
+
+.button.icon-button.checkbox-icon-container
+	width: 24px
+	height: 24px
+	@include button-all(24px)
+	svg
+		padding: 0 !important
+		margin: 0 !important
+		position: relative
+		top: -30px
+		transform: none
+
+.button.checkbox-icon-container::before
+	content: ""
+	position: relative
+	display: block
+	width: 10rem
+	height: 32px
+
+.checkbox-icon-container.not-selected path
+	fill: transparent
+
+.checkbox-label
+	display: inline-block
+	margin: 6px

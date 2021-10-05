@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/geotiff-3d-viewer.iml" filepath="$PROJECT_DIR$/geotiff-3d-viewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geotiff-3d-dem-viewer.iml" filepath="$PROJECT_DIR$/geotiff-3d-dem-viewer.iml" />
     </modules>
   </component>
 </project>
