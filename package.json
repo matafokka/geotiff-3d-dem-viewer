@@ -2,6 +2,7 @@
 	"name": "geotiff-3d-dem-viewer",
 	"version": "1.0.0",
 	"private": true,
+	"license": "LGPL-3.0-or-later",
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5.15.4",
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",

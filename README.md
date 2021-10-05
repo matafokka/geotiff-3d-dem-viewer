@@ -13,7 +13,7 @@ Serve the `build` directory using your favorite HTTP server.
 
 # Motivation
 
-There're couple of reasons why I did it:
+There're a couple of reasons why I did it:
 
 1. To pass a subject.
 1. To try React.
