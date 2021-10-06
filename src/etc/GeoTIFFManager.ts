@@ -64,7 +64,7 @@ class GeoTIFFManager {
 	 * @param file A file to add
 	 * @param geoTiff GeoTIFF instance
 	 * @param indices Image indices to add
-	 * @throws {Error<"not_georeferenced">} When image is not georeferenced
+	 * @throws {Error} When image is not georeferenced
 	 * @return Data to pass to the menu item
 	 */
 	addFile = async (file: File, geoTiff: any, indices: Iterable<number>): Promise<FileData> => {

@@ -64,10 +64,8 @@ export default function Menu(props: MenuProps) {
 				newNames.push(data);
 			} catch (e: any) {
 				errorOccurred = true;
-				if (e.message === "not_georeferenced")
-					errors[f.file.name] = "file is not georeferenced";
-				else
-					console.log(e);
+				errors[f.file.name] = "file is not georeferenced";
+				console.log(e);
 			}
 		}
 
