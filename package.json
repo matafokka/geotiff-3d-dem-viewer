@@ -1,6 +1,6 @@
 {
 	"name": "geotiff-3d-dem-viewer",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"private": true,
 	"license": "LGPL-3.0-or-later",
 	"homepage": "https://matafokka.github.io/geotiff-3d-dem-viewer",
@@ -23,7 +23,7 @@
 		"@types/react-tabs": "^2.3.3",
 		"cesium": "^1.85.0",
 		"geotiff": "^1.0.5",
-		"geotiff-geokeys-to-proj4": "^2022.5.28",
+		"geotiff-geokeys-to-proj4": "^2024.1.14",
 		"gh-pages": "^3.2.3",
 		"node-sass": "^6.0.1",
 		"proj4": "^2.7.5",
