@@ -5,8 +5,8 @@
     "main.js.map": "/geotiff-3d-dem-viewer/static/js/main.69483106.chunk.js.map",
     "runtime-main.js": "/geotiff-3d-dem-viewer/static/js/runtime-main.120b4147.js",
     "runtime-main.js.map": "/geotiff-3d-dem-viewer/static/js/runtime-main.120b4147.js.map",
-    "static/js/2.db6c1047.chunk.js": "/geotiff-3d-dem-viewer/static/js/2.db6c1047.chunk.js",
-    "static/js/2.db6c1047.chunk.js.map": "/geotiff-3d-dem-viewer/static/js/2.db6c1047.chunk.js.map",
+    "static/js/2.a45925bc.chunk.js": "/geotiff-3d-dem-viewer/static/js/2.a45925bc.chunk.js",
+    "static/js/2.a45925bc.chunk.js.map": "/geotiff-3d-dem-viewer/static/js/2.a45925bc.chunk.js.map",
     "static/js/3.4382706a.chunk.js": "/geotiff-3d-dem-viewer/static/js/3.4382706a.chunk.js",
     "static/js/3.4382706a.chunk.js.map": "/geotiff-3d-dem-viewer/static/js/3.4382706a.chunk.js.map",
     "cesium/Assets/IAU2006_XYS/IAU2006_XYS_0.json": "/geotiff-3d-dem-viewer/cesium/Assets/IAU2006_XYS/IAU2006_XYS_0.json",
@@ -378,11 +378,11 @@
     "service-worker.js": "/geotiff-3d-dem-viewer/service-worker.js",
     "service-worker.js.map": "/geotiff-3d-dem-viewer/service-worker.js.map",
     "static/css/main.773c066c.chunk.css.map": "/geotiff-3d-dem-viewer/static/css/main.773c066c.chunk.css.map",
-    "static/js/2.db6c1047.chunk.js.LICENSE.txt": "/geotiff-3d-dem-viewer/static/js/2.db6c1047.chunk.js.LICENSE.txt"
+    "static/js/2.a45925bc.chunk.js.LICENSE.txt": "/geotiff-3d-dem-viewer/static/js/2.a45925bc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.120b4147.js",
-    "static/js/2.db6c1047.chunk.js",
+    "static/js/2.a45925bc.chunk.js",
     "static/css/main.773c066c.chunk.css",
     "static/js/main.69483106.chunk.js"
   ]
