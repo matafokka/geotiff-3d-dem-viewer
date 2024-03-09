@@ -1,6 +1,6 @@
 {
 	"name": "geotiff-3d-dem-viewer",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"private": true,
 	"license": "LGPL-3.0-or-later",
 	"homepage": "https://matafokka.github.io/geotiff-3d-dem-viewer",
@@ -23,9 +23,9 @@
 		"@types/react-tabs": "^2.3.3",
 		"cesium": "^1.85.0",
 		"geotiff": "^1.0.5",
-		"geotiff-geokeys-to-proj4": "^2024.1.14",
+		"geotiff-geokeys-to-proj4": "^2024.3.9",
 		"gh-pages": "^3.2.3",
-		"node-sass": "^6.0.1",
+		"node-sass": "^9.0.0",
 		"proj4": "^2.7.5",
 		"react": "^17.0.2",
 		"react-app-polyfill": "^2.0.0",
@@ -39,7 +39,7 @@
 		"web-vitals": "^1.1.2"
 	},
 	"scripts": {
-		"start": "craco start",
+		"start": "craco --openssl-legacy-provider start",
 		"build": "craco build",
 		"serve": "http-server \"./build\" -c-1",
 		"build:serve": "npm run build && npm run serve",
@@ -80,9 +80,9 @@
 		]
 	},
 	"devDependencies": {
-		"@craco/craco": "^6.3.0",
-		"cpy-cli": "^3.1.1",
-		"craco-cesium": "^1.2.0",
+		"@craco/craco": "6.3.0",
+		"cpy-cli": "3.1.1",
+		"craco-cesium": "1.2.0",
 		"symlink-dir": "^5.0.1"
 	}
 }

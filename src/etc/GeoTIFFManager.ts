@@ -23,15 +23,18 @@ export interface FileData {
 	rectangle: Rectangle
 }
 
+interface FileEntry {
+	proj4projection: proj4.Converter,
+	originX: number, originY: number,
+	imageData: Array<number>,
+	boundingRect: Rectangle,
+	rightX: number, bottomY: number, width: number, height: number,
+	heightToMeters: number,
+	heightMultiplier: number,
+}
+
 interface FileEntries {
-	[id: string]: {
-		proj4projection: proj4.Converter,
-		originX: number, originY: number,
-		imageData: Array<number>,
-		boundingRect: Rectangle,
-		rightX: number, bottomY: number, width: number, height: number,
-		heightMultiplier: number,
-	}[]
+	[id: string]: FileEntry[]
 }
 
 /**
@@ -74,7 +77,7 @@ class GeoTIFFManager {
 			mean = 0,
 			pixelCount = 0,
 			rectangle: Rectangle | null = null,
-			images = [];
+			images: FileEntry[] = [];
 
 		for (let i of indices) {
 			const image = await geoTiff.getImage(i);
@@ -86,12 +89,8 @@ class GeoTIFFManager {
 			let [originX, originY] = image.getOrigin(),
 				width = image.getWidth(),
 				height = image.getHeight(),
-				[xSize, ySize, zScale] = image.getResolution(),
+				[xSize, ySize] = image.getResolution(),
 				nodata = image.getGDALNoData();
-
-			// Fix missing Z scale
-			if (zScale === 0)
-				zScale = 1;
 
 			// Rest of the coordinates for the top and left sides. Needed to determine pixel position.
 			const rightX = originX + width * xSize, bottomY = originY + height * ySize;
@@ -181,6 +180,7 @@ class GeoTIFFManager {
 				originY,
 				width,
 				height,
+				heightToMeters: projectionParameters.coordinatesConversionParameters.z,
 				heightMultiplier: 1,
 			});
 
@@ -240,7 +240,7 @@ class GeoTIFFManager {
 							continue;
 
 						// Set pixel value. Both Cesium and our program uses row-major order.
-						buffer.set([img.imageData[imageY * img.width + imageX] * img.heightMultiplier], y * this.width + x);
+						buffer.set([img.imageData[imageY * img.width + imageX] * img.heightToMeters * img.heightMultiplier], y * this.width + x);
 					}
 
 				}
