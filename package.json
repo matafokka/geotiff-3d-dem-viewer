@@ -39,7 +39,7 @@
 		"web-vitals": "^1.1.2"
 	},
 	"scripts": {
-		"start": "craco --openssl-legacy-provider start",
+		"start": "craco start",
 		"build": "craco build",
 		"serve": "http-server \"./build\" -c-1",
 		"build:serve": "npm run build && npm run serve",
