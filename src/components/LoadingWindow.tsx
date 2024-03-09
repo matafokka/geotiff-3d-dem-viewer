@@ -8,7 +8,7 @@ const loadingTexts = [
 	"Sending your images to the special agencies",
 	"<- Shuffling pixels",
 	"Drinking beer",
-	"Training war robots using your images",
+	"Training Skynet using your images",
 	"Eating your RAM (really, check usage)"
 ]
 
