@@ -23,7 +23,7 @@
 		"@types/react-tabs": "^2.3.3",
 		"cesium": "^1.85.0",
 		"geotiff": "^1.0.5",
-		"geotiff-geokeys-to-proj4": "^2024.3.9",
+		"geotiff-geokeys-to-proj4": "^2024.4.13",
 		"gh-pages": "^3.2.3",
 		"node-sass": "^9.0.0",
 		"proj4": "^2.7.5",
